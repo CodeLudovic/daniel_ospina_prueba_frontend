@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    height: 60vh;
+}
+
+.subContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 85vh;
+    padding-left: 96px;
+    justify-content: flex-end;
+}
+.titleBanner{
+    font-size: 75px;
+    font-weight: 300;
+}
+
+.subTitleBanner{
+    
+}
+
+.paragraph{
+
+}

@@ -1,0 +1,35 @@
+.navBarContainer{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    background-color: var(--color-primary);
+    height: 70vh;
+    border-bottom: 2px solid black;
+}
+
+.navBarContainer > *:nth-child(2) {
+    width:  30vw;
+}
+
+.menuContainer{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 246px;
+    justify-content: flex-start;
+    padding-left: 94px;
+    padding-top: 70px;
+}
+
+.menuContainer li{
+    color: var(--color-background);
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.bannerNavContainer{
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+}
