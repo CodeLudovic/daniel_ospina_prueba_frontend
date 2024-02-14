@@ -10,12 +10,12 @@ export const NavBar = () => {
 	const handleMenuClick = () => {
 		setOpenedMenu(!openedMenu);
 		if (openedMenu) {
-			setOpenedSubMenu(false); // Cerrar submenú si se cierra el menú principal
+			setOpenedSubMenu(false);
 		}
 	};
 
 	const handleSubMenuClick = (e) => {
-		e.stopPropagation(); // Evitar que el evento se propague y cierre el menú principal
+		e.stopPropagation();
 		setOpenedSubMenu(!openedSubMenu);
 	};
 
@@ -35,7 +35,6 @@ export const NavBar = () => {
 							openedMenu ? { fontWeight: "bold" } : { fontWeight: "normal" }
 						}
 						onMouseEnter={() => setOpenedMenu(true)}
-						//onMouseLeave={handleOutMenu}
 						onClick={handleMenuClick}>
 						Pages
 						<ul

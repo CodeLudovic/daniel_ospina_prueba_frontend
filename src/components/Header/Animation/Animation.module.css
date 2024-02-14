@@ -1,13 +1,22 @@
-.animationContainer{
+.animationContainer {
     display: flex;
     width: 100%;
     height: 100%;
     justify-content: center;
     align-items: center;
-}
+    background-image: linear-gradient(to left, var(--color-secondary), var(--color-primary)); 
+    background-size: 200% 100%; 
+    animation: slideAnimation 3s linear infinite; 
+  }
 
-.img{
-    width: 100%;
-    height: 100%;
-   /* object-fit: cover; */
-}
+  @keyframes slideAnimation {
+    0% {
+      background-position: 100% 0; /* Posición inicial del fondo */
+    }
+    50% {
+        background-position: 50% 0; /* Posición inicial del fondo */
+      }
+    100% {
+      background-position: 0 100%; /* Posición final del fondo */
+    }
+  }
