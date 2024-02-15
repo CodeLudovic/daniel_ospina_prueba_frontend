@@ -1,0 +1,9 @@
+.SectionInputsContainer {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 40px;
+    height: 40vh;
+    background-color: var(--color-background-section-inputs);
+}

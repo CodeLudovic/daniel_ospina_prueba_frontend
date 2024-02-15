@@ -1,0 +1,58 @@
+.selectContainer{    
+    width: 300px;
+    border-radius: 5px;
+}
+
+.selectInputBox {
+    display: flex;
+    width: 300px;
+    border: 1px solid black;
+    height: 50px;
+    border-radius: 5px;
+    background-color: var(--color-background);
+    font-size: 24px;
+    font-weight: 700;
+    padding-left: 20px;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+
+.openedBoxContainer{
+    margin-top: 7px;
+    border-radius: 5px;
+    width: 300px;
+    background-color: var(--color-primary);
+    height: 236px;
+    color: white;
+    font-weight: lighter;
+    padding-left: 30px;
+}
+
+.options{
+    font-size: 22px;
+    display: flex;
+    padding-top: 23px;
+    gap: 15px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.check1 {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 10px;
+    border: 1px solid #999;
+    margin-right: 5px;
+    padding: 10px;
+    font-weight: lighter;
+    font-size: 20px;
+}
+
+
+input[type="checkbox"]:checked{
+    box-shadow: inset 0 0 0 1px white;
+    border-radius: 50%; /* Hace que las esquinas sean redondeadas */
+}

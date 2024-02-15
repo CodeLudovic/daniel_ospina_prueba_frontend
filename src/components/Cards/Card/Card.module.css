@@ -1,0 +1,36 @@
+.card {
+    display: flex;
+    background-color: var(--color-secondary);
+    border-radius: 8px;
+    border: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 265px;
+    height: 400px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+
+}
+
+img{
+    border-radius: 50%;
+    width: 100px;
+    margin-top: 30px;
+}
+
+.title {
+    color: var(--color-primary);
+    font-size: 28px;
+    font-weight: bolder;
+}
+
+.content {
+    font-size: 15px;
+    font-weight: lighter;
+    color: var(--color-background);
+    text-align: left;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 30px;
+}

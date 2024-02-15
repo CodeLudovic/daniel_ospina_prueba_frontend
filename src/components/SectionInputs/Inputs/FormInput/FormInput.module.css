@@ -1,0 +1,77 @@
+.formContainer {
+    width: 300px;
+    height: 400px;
+}
+
+.form{
+    display: flex;
+    border-radius: 5px;
+    flex-direction: column;
+    color: white;
+    font-size: 22px;
+    font-weight: lighter;
+    padding-right: 20px;
+    gap: 8px;
+    align-items: center;
+}
+
+.labels{
+    display: flex;
+    flex-direction: column;
+    color: var(--color-primary);
+    font-weight: bold;
+    font-size: 18px;
+    gap: 8px;
+}
+
+.inputText{
+    font-family: var(--font-primary);
+    width: 270px;
+    border-radius: 10px;
+    height: 35px;
+    border: 1px solid black;
+    outline: none;
+    padding: 15px;
+}
+
+.textArea{
+    font-family: var(--font-primary);
+    display: flex;
+    padding-top: 10px;
+    width: 270px;
+    border-radius: 7px;
+    height: 90px;
+    background-color: var(--color-primary);
+    color: white;
+    border: 0;
+    outline: none;
+    padding-left: 15px;
+    resize: none;
+    margin-top: 10px;
+}
+
+.textArea::placeholder{
+    font-family: var(--font-primary);
+    font-style: italic;
+    color: white;
+    font-size: 12px;
+    font-weight: 100;
+}
+
+.buttonSubmit {
+    background-color: var(--color-secondary);
+    border: 0;
+    color: white;
+    font-size: 11px;
+    font-weight: 600;
+    width: 120px;
+    height: 33px;
+    border-radius: 8px;
+    font-family: var(--font-primary);
+    transition: transform 0.5s ease;
+}
+
+.buttonSubmit:hover {
+    transform: scale(1.1);
+    border: 1px solid white;
+}

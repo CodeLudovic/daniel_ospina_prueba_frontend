@@ -1,0 +1,39 @@
+.radioContainer{
+    display: flex;
+    width: 300px;
+    border-radius: 5px;
+    flex-direction: column;
+    background-color: var(--color-primary);
+    color: white;
+    font-size: 22px;
+    font-weight: lighter;
+    padding-left: 20px;
+    align-items: flex-start;
+    justify-content: space-between;
+    justify-content: center;
+    padding-right: 20px;
+}
+
+
+.radioForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.radio {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    align-items: center;
+    padding-left: 15px;
+}
+
+input[type="radio"]{
+    width: 24px;
+    height: 24px;
+}
+input[type="radio"]:checked{
+    width: 24px;
+    height: 24px;
+}

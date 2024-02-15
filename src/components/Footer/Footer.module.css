@@ -1,0 +1,43 @@
+.footerContainer{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    background-color: var(--color-primary);
+    color: white;
+    padding-bottom: 60px;
+    padding-top: 40px;
+    gap: 20px;
+    justify-content: center;
+}
+
+.divP p:first-child {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.divP{
+    width: 300px;
+}
+
+.divPContainers {
+    display: flex;
+    flex-direction: row;
+    gap: 120px;
+    align-items: center;
+    justify-content: center;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.pFooter{
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.divFinalFooter{
+    font-family: var(--font-primary);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}

@@ -30,27 +30,21 @@ export const NavBar = () => {
 				<ul className={styles.menuContainer}>
 					<li>Home</li>
 					<li
-						className={styles.submenu}
-						style={
-							openedMenu ? { fontWeight: "bold" } : { fontWeight: "normal" }
-						}
-						onMouseEnter={() => setOpenedMenu(true)}
+						style={openedMenu ? { fontWeight: "bold" } : null}
 						onClick={handleMenuClick}>
 						Pages
 						<ul
 							className={styles.submenuContainer}
-							style={openedMenu ? { position: "fixed" } : { display: "none" }}>
+							style={
+								openedMenu ? { position: "absolute" } : { display: "none" }
+							}>
 							<li className={styles.menuItem}>Page 1</li>
 							<li className={styles.menuItem}>Page 2</li>
-							<li
-								onClick={handleSubMenuClick}
-								style={
-									openedSubMenu
-										? { fontWeight: "bold" }
-										: { fontWeight: "normal" }
-								}>
-								<p className={styles.p3}>
-									Page 3{" "}
+							<li onClick={handleSubMenuClick} className={styles.internalMenu}>
+								<p
+									className={styles.p3}
+									style={!openedSubMenu ? null : { fontWeight: "bold" }}>
+									Page 3
 									{!openedSubMenu ? (
 										<svg width="10" height="10" viewBox="0 0 10 10">
 											<polygon points="0,0 10,5 0,10" fill="white" />
@@ -66,8 +60,8 @@ export const NavBar = () => {
 										openedSubMenu ? styles.contSub : styles.contSubHidden
 									}>
 									<li className={styles.submenuItem}>Item 1</li>
-									<li className={styles.submenuItem}>Item 1</li>
-									<li className={styles.submenuItem}>Item 1</li>
+									<li className={styles.submenuItem}>Item 2</li>
+									<li className={styles.submenuItem}>Item 3</li>
 								</ul>
 							</li>
 						</ul>
@@ -76,7 +70,6 @@ export const NavBar = () => {
 					<li>Contact</li>
 				</ul>
 				<Banner />
-				<div style={{ marginTop: openedMenu ? "80px" : "0" }}></div>
 			</nav>
 			<div>
 				<Animation />

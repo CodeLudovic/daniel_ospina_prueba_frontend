@@ -23,6 +23,12 @@
 .menuContainer > li {
     width: 150px;
     text-align: center;
+    font-weight: normal;
+    transition: font-weight 0.1s ease-in-out
+}
+
+.menuContainer > li:hover {
+    font-weight: bold;
 }
 
 .bannerNavContainer{
@@ -33,14 +39,33 @@
 
 .menuItem {
     border-bottom: 1px solid white;
-    font-weight: 100; 
+    font-weight: 100;
+    transition: font-weight 0.1s ease-in-out;
 }
+
+.menuItem:hover {
+    font-weight: bold;
+}
+
 
 .submenuItem {
     display: block;
     border-bottom: 1px solid white; 
     margin-left: 20px;
     font-weight: 100; 
+    transition: font-weight 0.1s ease-in-out;
+}
+
+.submenuItem:hover {
+    font-weight: bold;
+}
+
+.internalMenu{
+    display: block;
+}
+
+.internalMenu:hover{
+    font-weight: bold;
 }
 
 .submenuContainer{
@@ -70,5 +95,10 @@
     border-bottom: 1px solid white;
     align-items: center;
     justify-content: space-between;
+    font-weight: normal;
+    transition: font-weight 0.1s ease-in-out;
+}
 
+.p3:hover{
+    font-weight: bold;
 }
