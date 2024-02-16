@@ -1,7 +1,8 @@
 import PropTypes from "prop-types";
 import styles from "./Card.module.css";
 
-export const Card = ({ title, content, img }) => {
+export const Card = ({ objInfo }) => {
+	const { img, title, content } = objInfo;
 	return (
 		<div className={styles.card}>
 			<img src={img} />
@@ -12,7 +13,9 @@ export const Card = ({ title, content, img }) => {
 };
 
 Card.propTypes = {
-	title: PropTypes.string.isRequired,
-	content: PropTypes.string.isRequired,
-	img: PropTypes.string.isRequired,
+	objInfo: PropTypes.shape({
+		img: PropTypes.string.isRequired,
+		title: PropTypes.string.isRequired,
+		content: PropTypes.string.isRequired,
+	}).isRequired,
 };

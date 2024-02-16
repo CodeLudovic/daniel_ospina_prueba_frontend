@@ -20,6 +20,15 @@ export const Nav = () => {
 		e.stopPropagation();
 		setOpenedSubMenu(!openedSubMenu);
 	};
+
+	const handleLinkClick = () => {
+		if (open) {
+			setOpen(false);
+		}
+		if (openedMenu) {
+			setOpenedMenu(false);
+		}
+	};
 	return (
 		<div>
 			<nav className={styles.bannerNavContainer}>
@@ -27,23 +36,21 @@ export const Nav = () => {
 					<i id="bars">{open ? <CloseIcon /> : <MenuIcon />}</i>
 				</div>
 				<ul className={clsx(styles.menuContainer, open ? styles.active : null)}>
-					<li onClick={() => (openedMenu ? setOpenedMenu(!openedMenu) : null)}>
-						Home
-					</li>
+					<li onClick={handleLinkClick}>Home</li>
 
-					<li
-						onClick={handleMenuClick}
-						style={
-							openedMenu ? { fontWeight: "bold" } : { fontWeight: "normal" }
-						}>
+					<li onClick={handleMenuClick}>
 						Pages
 						<ul
 							className={styles.submenuContainer}
 							style={
 								openedMenu ? { position: "absolute" } : { display: "none" }
 							}>
-							<li className={styles.menuItem}>Page 1</li>
-							<li className={styles.menuItem}>Page 2</li>
+							<li onClick={handleLinkClick} className={styles.menuItem}>
+								Page 1
+							</li>
+							<li onClick={handleLinkClick} className={styles.menuItem}>
+								Page 2
+							</li>
 							<li onClick={handleSubMenuClick} className={styles.internalMenu}>
 								<p className={styles.p3}>
 									Page 3
@@ -62,27 +69,15 @@ export const Nav = () => {
 									className={
 										openedSubMenu ? styles.contSub : styles.contSubHidden
 									}>
-									<li
-										className={styles.submenuItem}
-										onClick={() =>
-											openedMenu ? setOpenedMenu(!openedMenu) : null
-										}>
+									<li className={styles.submenuItem} onClick={handleLinkClick}>
 										Item 1
 									</li>
 
-									<li
-										className={styles.submenuItem}
-										onClick={() =>
-											openedMenu ? setOpenedMenu(!openedMenu) : null
-										}>
+									<li className={styles.submenuItem} onClick={handleLinkClick}>
 										Item 2
 									</li>
 
-									<li
-										className={styles.submenuItem}
-										onClick={() =>
-											openedMenu ? setOpenedMenu(!openedMenu) : null
-										}>
+									<li className={styles.submenuItem} onClick={handleLinkClick}>
 										Item 3
 									</li>
 								</ul>
@@ -90,12 +85,8 @@ export const Nav = () => {
 						</ul>
 					</li>
 
-					<li onClick={() => (openedMenu ? setOpenedMenu(!openedMenu) : null)}>
-						About
-					</li>
-					<li onClick={() => (openedMenu ? setOpenedMenu(!openedMenu) : null)}>
-						Contact
-					</li>
+					<li onClick={handleLinkClick}>About</li>
+					<li onClick={handleLinkClick}>Contact</li>
 				</ul>
 			</nav>
 			<Banner />
