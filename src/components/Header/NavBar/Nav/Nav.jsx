@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { Banner } from "../Banner/Banner";
+import { Banner } from "../../Banner/Banner";
 import CloseIcon from "@mui/icons-material/Close";
 import MenuIcon from "@mui/icons-material/Menu";
-import styles from "./NavBar.module.css";
+import styles from "../NavBar.module.css";
 import clsx from "clsx";
 
 export const Nav = () => {
