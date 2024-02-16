@@ -107,14 +107,12 @@ nav{
     border-bottom: 1px solid white;
     align-items: center;
     justify-content: space-between;
-    font-weight: normal;
     transition: font-weight 0.1s ease-in-out;
 }
 
 .p3:hover{
     font-weight: bold;
 }
-
 
 .mobile i{
     color: #fff;

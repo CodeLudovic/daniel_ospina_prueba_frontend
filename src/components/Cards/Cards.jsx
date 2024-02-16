@@ -5,6 +5,11 @@ import img from "./../../assets/img.png";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
+/*
+ * Componente Cards
+ * Maneja el uso del Carrousel con la libreria react-multi-carousel
+ */
+
 export const Cards = () => {
 	const responsive = {
 		XXLarge: {
