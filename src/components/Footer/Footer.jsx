@@ -1,5 +1,9 @@
 import styles from "./Footer.module.css";
 export const Footer = () => {
+	const clickLink = () => {
+		console.log("footer link");
+	};
+
 	return (
 		<div className={styles.footerContainer}>
 			<div className={styles.divPContainers}>
@@ -19,7 +23,9 @@ export const Footer = () => {
 			<div className={styles.divFinalFooter}>
 				<p className={styles.pFooter}>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-					<a style={{ textDecoration: "underline", fontWeight: "bold" }}>
+					<a
+						style={{ textDecoration: "underline", fontWeight: "bold" }}
+						onClick={clickLink}>
 						Link Here
 					</a>{" "}
 					Lorem ipsum

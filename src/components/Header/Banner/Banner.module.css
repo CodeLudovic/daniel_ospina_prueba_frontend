@@ -28,6 +28,7 @@
 .paragraph{
     font-weight: lighter;
     font-size: 18.5px;
+    width: 100%;
 }
 
 .paragraphs{
@@ -79,4 +80,75 @@
 
 .buttonBanner:active polygon{
     fill: var(--color-background);
+}
+
+
+/* Estilos para pantallas de escritorio */
+@media screen and (min-width: 1024px) {
+
+}
+
+/* Estilos para tabletas */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .titleBanner{
+        font-size: 50px;
+        font-weight: 300;
+    }
+    
+    .subTitleBanner{
+        font-size: 26px;
+        
+    }
+    
+    .paragraph{
+        font-weight: lighter;
+        font-size: 17px;
+        
+    }
+    
+    .paragraphs{
+        padding-top: 10px;
+        
+    }
+    .subContainer {
+        padding-left: 45px;
+    }
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .titleBanner{
+        font-size: 32px;
+        font-weight: 300;
+    }
+    
+    .subTitleBanner{
+        font-size: 16px;
+        
+    }
+    
+    .paragraph{
+        font-weight: lighter;
+        font-size: 14px;
+    }
+    
+    .paragraphs{
+        padding-top: 10px;
+        width: 270px;
+    }
+
+    .subContainer {
+        padding-left: 20px;
+    }
+
+    .buttonBanner{
+        width: 200px;
+        height: 60px;
+    }
+
+    .textButton{
+        font-weight: 600;
+        font-size: 19px;
+    }
+    
 }

@@ -1,11 +1,16 @@
 /* eslint-disable */
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Animation } from "../Animation/Animation";
 import { Banner } from "../Banner/Banner";
 import styles from "./NavBar.module.css";
+import ResponsiveMenu from "./ResponsiveMenu";
+import { Nav } from "./Nav";
+
 export const NavBar = () => {
 	const [openedMenu, setOpenedMenu] = useState(false);
 	const [openedSubMenu, setOpenedSubMenu] = useState(false);
+
+	const [minMenu, setMinMenu] = useState(false);
 
 	const handleMenuClick = () => {
 		setOpenedMenu(!openedMenu);
@@ -14,63 +19,37 @@ export const NavBar = () => {
 		}
 	};
 
+	useEffect(() => {
+		// Función para manejar el cambio de tamaño de la ventana
+		const handleResize = () => {
+			const screenWidth = window.innerWidth;
+			if (screenWidth < 769) {
+				setMinMenu(true);
+			} else {
+				setMinMenu(false);
+			}
+		};
+
+		// Agregar un event listener al evento 'resize' del objeto 'window'
+		window.addEventListener("resize", handleResize);
+
+		// Llamar a handleResize inicialmente para manejar el tamaño de la ventana al cargar la página
+		handleResize();
+
+		// Limpiar el event listener cuando el componente se desmonte
+		return () => {
+			window.removeEventListener("resize", handleResize);
+		};
+	}, []); // El efecto se ejecuta solo una vez al montar el componente
+
 	const handleSubMenuClick = (e) => {
 		e.stopPropagation();
 		setOpenedSubMenu(!openedSubMenu);
 	};
 
-	const handleOutMenu = () => {
-		setOpenedMenu(false);
-		setOpenedSubMenu(false);
-	};
-
 	return (
 		<header className={styles.navBarContainer}>
-			<nav className={styles.bannerNavContainer}>
-				<ul className={styles.menuContainer}>
-					<li>Home</li>
-					<li
-						style={openedMenu ? { fontWeight: "bold" } : null}
-						onClick={handleMenuClick}>
-						Pages
-						<ul
-							className={styles.submenuContainer}
-							style={
-								openedMenu ? { position: "absolute" } : { display: "none" }
-							}>
-							<li className={styles.menuItem}>Page 1</li>
-							<li className={styles.menuItem}>Page 2</li>
-							<li onClick={handleSubMenuClick} className={styles.internalMenu}>
-								<p
-									className={styles.p3}
-									style={!openedSubMenu ? null : { fontWeight: "bold" }}>
-									Page 3
-									{!openedSubMenu ? (
-										<svg width="10" height="10" viewBox="0 0 10 10">
-											<polygon points="0,0 10,5 0,10" fill="white" />
-										</svg>
-									) : (
-										<svg width="10" height="10" viewBox="0 0 10 10">
-											<polygon points="0,0 5,10 10,0" fill="white" />
-										</svg>
-									)}
-								</p>
-								<ul
-									className={
-										openedSubMenu ? styles.contSub : styles.contSubHidden
-									}>
-									<li className={styles.submenuItem}>Item 1</li>
-									<li className={styles.submenuItem}>Item 2</li>
-									<li className={styles.submenuItem}>Item 3</li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-					<li>About</li>
-					<li>Contact</li>
-				</ul>
-				<Banner />
-			</nav>
+			<Nav />
 			<div>
 				<Animation />
 			</div>

@@ -8,6 +8,7 @@
     padding-top: 40px;
     gap: 20px;
     justify-content: center;
+    height: auto;
 }
 
 .divP p:first-child {
@@ -26,7 +27,7 @@
     align-items: center;
     justify-content: center;
     padding-right: 20px;
-    padding-left: 20px;
+    padding-left: 34px;
 }
 
 .pFooter{
@@ -40,4 +41,51 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .divPContainers{
+        padding-left: 34px;
+        gap: 30px;
+    }
+
+    .divP p:first-child {
+        font-size: 19px;
+        font-weight: bold;
+    }
+    
+    .footerContainer{
+        padding-left: 15px; 
+    }
+    
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+
+    .divPContainers {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        /* margin-left: 15px; */
+    }
+
+    .pFooter{
+        font-size: 14px;
+        font-weight: 100;
+        text-align: center;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .divP{
+        width: 250px;
+    }
+
+    .footerContainer{
+        padding-bottom: 30px;
+        align-items: center;
+    }
+    
 }

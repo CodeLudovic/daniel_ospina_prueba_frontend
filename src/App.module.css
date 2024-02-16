@@ -43,3 +43,23 @@ li {
 	list-style: none;
 }
 
+a {
+	color: inherit; /* Hereda el color del texto del elemento padre */
+	text-decoration: none; /* Elimina la subrayado predeterminado */
+  }
+  
+a:visited {
+	color: inherit; /* Hereda el color del texto del elemento padre */
+  }
+
+  .container {
+	width: 85%;
+	margin: auto;
+  }
+  @media screen and (min-width: 1024px) {
+	.container {
+	  width: 70%;
+	  max-width: 1024px;
+	  margin: auto;
+	}
+  }
